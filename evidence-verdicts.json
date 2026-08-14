@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "evidence_marker": "UBI-A7-ADFAFF62AD2E",
+  "generated_at_utc": "2026-08-14T10:11:51.551487+00:00",
+  "sampling_algorithm_version": "marker-seeded-sha256-v1",
+  "tests": [
+    {
+      "test_id": "AT-01",
+      "control_id": "A.5.15",
+      "population": "access",
+      "procedure": "Sample active/disabled access records and confirm the supporting record is current (<=180 days old at audit-period end) and status is traceable.",
+      "required_sample_ids": [
+        "ACC-001",
+        "ACC-002",
+        "ACC-003"
+      ],
+      "excluded_records": [
+        {
+          "record_id": "ACC-004",
+          "reason_code": "duplicate_record_id"
+        }
+      ],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "CONFORMS",
+      "verdict": "conforms",
+      "failed_sample_ids": [],
+      "affected_unit_ids": [],
+      "evidence_locators": [
+        "audit-populations.csv:iam-export:2",
+        "audit-populations.csv:iam-export:3",
+        "audit-populations.csv:iam-export:4"
+      ]
+    },
+    {
+      "test_id": "AT-02",
+      "control_id": "A.5.16",
+      "population": null,
+      "procedure": "Retest the HR termination sample (April-June 2026, 20 records) for disablement within the 24-hour policy window and for an HR record backing every active account.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 2,
+        "affected_units": 2,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-SYSTEMIC",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "n.adamu",
+        "vendor-backup"
+      ],
+      "affected_unit_ids": [
+        "n.adamu",
+        "vendor-backup"
+      ],
+      "evidence_locators": [
+        "evidence-pack.md:Identity export bullet 4 (n.adamu, vendor-backup)"
+      ]
+    },
+    {
+      "test_id": "AT-03",
+      "control_id": "A.5.18",
+      "population": null,
+      "procedure": "Evidence request 1/2 (overlay D2, control A.5.18 expansion): obtain the Q1 review evidence attachment for ticket IAM-4412 and confirm privileged and service accounts were included in the reviewed population. Rationale: the SoA assigns quarterly review ownership to the CISO for all applicable accounts; a sample that omits the highest-risk account classes cannot support a conforming verdict for the control as scoped. Also: Evidence request 2/2 (overlay D2, control A.5.18 expansion): obtain reviewer sign-off and removal evidence for Q2 ticket IAM-5031. Rationale: the ticket was still 'in progress' with no sign-off at audit-period end, so operating effectiveness for Q2 cannot yet be tested rather than assumed to have failed.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": true,
+        "population_or_required_procedure_unavailable": true
+      },
+      "rule_id": "MINOR-EVIDENCE",
+      "verdict": "minor_nc",
+      "failed_sample_ids": [],
+      "affected_unit_ids": [],
+      "evidence_locators": [
+        "evidence-pack.md:Access-review tickets bullet 1 (IAM-4412)",
+        "evidence-pack.md:Access-review tickets bullet 2 (IAM-5031)"
+      ]
+    },
+    {
+      "test_id": "AT-04",
+      "control_id": "A.5.19",
+      "population": null,
+      "procedure": "Confirm PayBridge has a completed supplier security assessment with any monitored conditions tracked to closure. Also: Confirm HelpSphere, added 14 May 2026 with access to patient-support attachments, has a completed security assessment and an approved risk decision prior to data access being granted.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": true,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-DESIGN",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "HelpSphere"
+      ],
+      "affected_unit_ids": [
+        "HelpSphere"
+      ],
+      "evidence_locators": [
+        "evidence-pack.md:Supplier evidence bullet 2 (PayBridge)",
+        "evidence-pack.md:Supplier evidence bullet 3 (HelpSphere)",
+        "evidence-pack.md:Interview notes (Procurement Analyst)"
+      ]
+    },
+    {
+      "test_id": "AT-05",
+      "control_id": "A.5.24",
+      "population": null,
+      "procedure": "Confirm the exercise evidence cited as the 2026 annual test is dated within 2026 and matches its own file metadata and participant list. Also: Retest the 6 June 2026 severity-2 incident response record for roster currency, escalation timing, and ownership of every lessons-learned action.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 1,
+        "affected_units": 1,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": true,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MINOR-OPERATING",
+      "verdict": "minor_nc",
+      "failed_sample_ids": [
+        "IR-EX-2025-02",
+        "sev2-2026-06-06-action-1"
+      ],
+      "affected_unit_ids": [
+        "IR-EX-2025-02",
+        "sev2-2026-06-06"
+      ],
+      "evidence_locators": [
+        "evidence-pack.md:Incident evidence bullet 3 (IR-EX-2025-02 label vs metadata)",
+        "evidence-pack.md:Incident evidence bullet 4 (6 June 2026 incident)"
+      ]
+    },
+    {
+      "test_id": "AT-06",
+      "control_id": "A.5.30",
+      "population": null,
+      "procedure": "Confirm a restore test exists against the current (post-migration) production database version and meets the 4-hour RTO.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": true,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MINOR-EVIDENCE",
+      "verdict": "minor_nc",
+      "failed_sample_ids": [
+        "restore-report-2024-08-22"
+      ],
+      "affected_unit_ids": [
+        "production-database"
+      ],
+      "evidence_locators": [
+        "evidence-pack.md:ICT continuity and backup evidence bullet 3 (22 Aug 2024 restore report)",
+        "evidence-pack.md:Interview notes (Infrastructure Lead)"
+      ]
+    },
+    {
+      "test_id": "AT-07",
+      "control_id": "A.6.3",
+      "population": "training",
+      "procedure": "Sample training records and confirm status is complete or a documented waiver, with supporting evidence no older than 180 days. Also: Confirm role-based secure-development training assignments exist and are current for developer and privileged-administrator roles.",
+      "required_sample_ids": [
+        "TRN-104",
+        "TRN-105",
+        "TRN-106"
+      ],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": true,
+        "failed_required_samples": 1,
+        "affected_units": 1,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": true,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-DESIGN",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "TRN-104",
+        "secure-dev-training-roster"
+      ],
+      "affected_unit_ids": [
+        "TRN-104",
+        "engineering-developers",
+        "privileged-admins"
+      ],
+      "evidence_locators": [
+        "audit-populations.csv:lms-export:5",
+        "audit-populations.csv:lms-export:6",
+        "audit-populations.csv:lms-export:7",
+        "evidence-pack.md:Awareness evidence bullet 3-4 (roster last Oct 2024; LMS migration)"
+      ]
+    },
+    {
+      "test_id": "AT-08",
+      "control_id": "A.8.5",
+      "population": "access",
+      "procedure": "Sample privileged-scope access records for phishing-resistant MFA coverage; retest the two exception accounts whose documented exception expired 31 Mar 2026 against continued password+SMS authentication in June 2026.",
+      "required_sample_ids": [
+        "ACC-001",
+        "ACC-002",
+        "ACC-006"
+      ],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 2,
+        "affected_units": 2,
+        "prior_major_open_or_repeated": true,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-SYSTEMIC",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "mfa-exception-account-1",
+        "mfa-exception-account-2"
+      ],
+      "affected_unit_ids": [
+        "mfa-exception-account-1",
+        "mfa-exception-account-2"
+      ],
+      "evidence_locators": [
+        "audit-populations.csv:iam-export:2",
+        "audit-populations.csv:iam-export:3",
+        "audit-populations.csv:iam-export:7",
+        "evidence-pack.md:Identity export bullet 2-3 (expired exception, password+SMS)",
+        "evidence-pack.md:Prior audit report item 1 (NC-25-01)"
+      ]
+    },
+    {
+      "test_id": "AT-09",
+      "control_id": "A.8.8",
+      "population": "vulnerability",
+      "procedure": "Sample critical-scope vulnerability records and confirm open items are remediated or exception-approved within the 7-day SLA. Also: Sample high-scope vulnerability records and confirm any risk-accepted item has a current, unexpired acceptance record.",
+      "required_sample_ids": [
+        "VUL-201",
+        "VUL-205"
+      ],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 2,
+        "affected_units": 2,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-SYSTEMIC",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "VUL-201",
+        "VUL-203"
+      ],
+      "affected_unit_ids": [
+        "VUL-201",
+        "VUL-203"
+      ],
+      "evidence_locators": [
+        "audit-populations.csv:vuln-export:2",
+        "audit-populations.csv:vuln-export:6",
+        "audit-populations.csv:vuln-export:3",
+        "audit-populations.csv:vuln-export:4",
+        "evidence-pack.md:Vulnerability evidence bullet 5 (three expired accepted-risk records)"
+      ]
+    },
+    {
+      "test_id": "AT-10",
+      "control_id": "A.8.13",
+      "population": "backup",
+      "procedure": "Sample backup job records and confirm each completed successfully.",
+      "required_sample_ids": [
+        "BKP-302",
+        "BKP-304",
+        "BKP-305"
+      ],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "CONFORMS",
+      "verdict": "conforms",
+      "failed_sample_ids": [],
+      "affected_unit_ids": [],
+      "evidence_locators": [
+        "audit-populations.csv:backup-export:3",
+        "audit-populations.csv:backup-export:5",
+        "audit-populations.csv:backup-export:6"
+      ]
+    },
+    {
+      "test_id": "AT-11",
+      "control_id": "A.8.15",
+      "population": null,
+      "procedure": "Confirm every production Linux host claimed as monitored is reporting, with particular attention to the billing worker given its criticality. Also: Confirm identity audit log retention meets the 180-day period required by the Incident Response Plan.",
+      "required_sample_ids": [],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": true,
+        "failed_required_samples": 1,
+        "affected_units": 1,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "MAJOR-DESIGN",
+      "verdict": "major_nc",
+      "failed_sample_ids": [
+        "billing-worker-host",
+        "identity-audit-log-retention"
+      ],
+      "affected_unit_ids": [
+        "billing-worker-host",
+        "identity-platform"
+      ],
+      "evidence_locators": [
+        "evidence-pack.md:Logging evidence bullet 3 (4 silent hosts incl. billing worker)",
+        "evidence-pack.md:Logging evidence bullet 4 (90-day retention vs 180-day requirement)"
+      ]
+    },
+    {
+      "test_id": "AT-12",
+      "control_id": "A.8.32",
+      "population": "change",
+      "procedure": "Sample change records and confirm authorization, test evidence, and closure; corroborate against the organisation's own named change sample.",
+      "required_sample_ids": [
+        "CHG-401",
+        "CHG-403",
+        "CHG-404"
+      ],
+      "excluded_records": [],
+      "sample_facts": {
+        "required_control_design_missing": false,
+        "failed_required_samples": 0,
+        "affected_units": 0,
+        "prior_major_open_or_repeated": false,
+        "required_evidence_stale_missing_or_hash_failed": false,
+        "population_or_required_procedure_unavailable": false
+      },
+      "rule_id": "CONFORMS",
+      "verdict": "conforms",
+      "failed_sample_ids": [],
+      "affected_unit_ids": [],
+      "evidence_locators": [
+        "audit-populations.csv:change-export:2",
+        "audit-populations.csv:change-export:4",
+        "audit-populations.csv:change-export:5",
+        "evidence-pack.md:Change sample bullets 2-4 (CHG-2281, CHG-2310, CHG-2344)"
+      ]
+    }
+  ]
+}

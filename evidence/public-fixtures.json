@@ -1,0 +1,487 @@
+{
+  "fixtures": [
+    {
+      "case_id": "P-AUDIT-01",
+      "control_id": "A.5.15",
+      "expected": {
+        "rule_id": "MINOR-OPERATING",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 1,
+        "failed_required_samples": 1,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-a829f9"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-02",
+      "control_id": "A.6.16",
+      "expected": {
+        "rule_id": "MAJOR-SYSTEMIC",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 2,
+        "failed_required_samples": 3,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-d418dd",
+        "sample-a33d79"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-03",
+      "control_id": "A.7.17",
+      "expected": {
+        "rule_id": "MAJOR-RECURRENCE",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": true,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-ec3492",
+        "sample-f38bfd",
+        "sample-1fb177"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-04",
+      "control_id": "A.8.18",
+      "expected": {
+        "rule_id": "MAJOR-DESIGN",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": true,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-a77235"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-05",
+      "control_id": "A.5.19",
+      "expected": {
+        "rule_id": "MINOR-EVIDENCE",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": true
+      },
+      "sample_ids": [
+        "sample-1863a7",
+        "sample-443762"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-06",
+      "control_id": "A.6.20",
+      "expected": {
+        "rule_id": "NOT-TESTED",
+        "verdict": "not_tested"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": true,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-e8a35b",
+        "sample-8feb52",
+        "sample-57c76d"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-07",
+      "control_id": "A.7.21",
+      "expected": {
+        "rule_id": "CONFORMS",
+        "verdict": "conforms"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-9572bd"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-08",
+      "control_id": "A.8.22",
+      "expected": {
+        "rule_id": "MINOR-OPERATING",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 1,
+        "failed_required_samples": 1,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-9ed151",
+        "sample-9b14f6"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-09",
+      "control_id": "A.5.23",
+      "expected": {
+        "rule_id": "MAJOR-SYSTEMIC",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 2,
+        "failed_required_samples": 3,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-b9e309",
+        "sample-f027d2",
+        "sample-40c02e"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-10",
+      "control_id": "A.6.24",
+      "expected": {
+        "rule_id": "MAJOR-RECURRENCE",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": true,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-66d882"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-11",
+      "control_id": "A.7.25",
+      "expected": {
+        "rule_id": "MAJOR-DESIGN",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": true,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-8257fa",
+        "sample-9f0fd5"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-12",
+      "control_id": "A.8.26",
+      "expected": {
+        "rule_id": "MINOR-EVIDENCE",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": true
+      },
+      "sample_ids": [
+        "sample-a31cfb",
+        "sample-583a75",
+        "sample-b21bff"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-13",
+      "control_id": "A.5.27",
+      "expected": {
+        "rule_id": "NOT-TESTED",
+        "verdict": "not_tested"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": true,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-5cdff2"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-14",
+      "control_id": "A.6.28",
+      "expected": {
+        "rule_id": "CONFORMS",
+        "verdict": "conforms"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-e42376",
+        "sample-3cc055"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-15",
+      "control_id": "A.7.29",
+      "expected": {
+        "rule_id": "MINOR-OPERATING",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 1,
+        "failed_required_samples": 1,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-13fa80",
+        "sample-44507c",
+        "sample-5d3ccb"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-16",
+      "control_id": "A.8.30",
+      "expected": {
+        "rule_id": "MAJOR-SYSTEMIC",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 2,
+        "failed_required_samples": 3,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-2c93a5"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-17",
+      "control_id": "A.5.31",
+      "expected": {
+        "rule_id": "MAJOR-RECURRENCE",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": true,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-f5d8dd",
+        "sample-5405da"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-18",
+      "control_id": "A.6.32",
+      "expected": {
+        "rule_id": "MAJOR-DESIGN",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": true,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-af18c3",
+        "sample-1cc7aa",
+        "sample-725f5a"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-19",
+      "control_id": "A.7.33",
+      "expected": {
+        "rule_id": "MINOR-EVIDENCE",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": true
+      },
+      "sample_ids": [
+        "sample-de38b1"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-20",
+      "control_id": "A.8.34",
+      "expected": {
+        "rule_id": "NOT-TESTED",
+        "verdict": "not_tested"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": true,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-f3381d",
+        "sample-27af56"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-21",
+      "control_id": "A.5.15",
+      "expected": {
+        "rule_id": "CONFORMS",
+        "verdict": "conforms"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-c7626e",
+        "sample-c31fa0",
+        "sample-38f489"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-22",
+      "control_id": "A.6.16",
+      "expected": {
+        "rule_id": "MINOR-OPERATING",
+        "verdict": "minor_nc"
+      },
+      "facts": {
+        "affected_units": 1,
+        "failed_required_samples": 1,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-f5673f"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-23",
+      "control_id": "A.7.17",
+      "expected": {
+        "rule_id": "MAJOR-SYSTEMIC",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 2,
+        "failed_required_samples": 3,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": false,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-b274e7",
+        "sample-267d38"
+      ]
+    },
+    {
+      "case_id": "P-AUDIT-24",
+      "control_id": "A.8.18",
+      "expected": {
+        "rule_id": "MAJOR-RECURRENCE",
+        "verdict": "major_nc"
+      },
+      "facts": {
+        "affected_units": 0,
+        "failed_required_samples": 0,
+        "population_or_required_procedure_unavailable": false,
+        "prior_major_open_or_repeated": true,
+        "required_control_design_missing": false,
+        "required_evidence_stale_missing_or_hash_failed": false
+      },
+      "sample_ids": [
+        "sample-221ad6",
+        "sample-48c288",
+        "sample-8b54bc"
+      ]
+    }
+  ],
+  "interface_version": "2026-07",
+  "project": "GRC-A3",
+  "schema_version": "1.0"
+}

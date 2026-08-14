@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sample Manifest Row",
+  "type": "object",
+  "required": [
+    "population", "control_id", "marker", "algorithm_version", "sample_size_rule",
+    "eligible_count", "sample_size", "record_id", "included", "reason_code",
+    "sample_manifest_hash"
+  ],
+  "properties": {
+    "population": { "type": "string" },
+    "control_id": { "type": "string" },
+    "marker": { "type": "string" },
+    "algorithm_version": { "type": "string" },
+    "sample_size_rule": { "type": "string" },
+    "eligible_count": { "type": "integer" },
+    "sample_size": { "type": "integer" },
+    "record_id": { "type": "string" },
+    "included": { "type": "boolean" },
+    "reason_code": { "type": "string" },
+    "sample_manifest_hash": { "type": "string" }
+  }
+}

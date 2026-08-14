@@ -1,0 +1,36 @@
+schema_version: "1.0"
+verdict_order:
+  - not_tested
+  - conforms
+  - minor_nc
+  - major_nc
+rules:
+  - id: MAJOR-DESIGN
+    when: required_control_design_missing
+    verdict: major_nc
+  - id: MAJOR-SYSTEMIC
+    when: failed_required_samples_gte_2_and_affected_units_gte_2
+    verdict: major_nc
+  - id: MAJOR-RECURRENCE
+    when: prior_major_open_or_repeated
+    verdict: major_nc
+  - id: MINOR-OPERATING
+    when: failed_required_samples_gte_1
+    verdict: minor_nc
+  - id: MINOR-EVIDENCE
+    when: required_evidence_stale_missing_or_hash_failed
+    verdict: minor_nc
+  - id: NOT-TESTED
+    when: population_or_required_procedure_unavailable
+    verdict: not_tested
+  - id: CONFORMS
+    when: all_required_samples_pass_and_evidence_is_current_and_valid
+    verdict: conforms
+precedence: first_match
+output_requirements:
+  - rule_id
+  - control_id
+  - verdict
+  - failed_sample_ids
+  - affected_unit_ids
+  - evidence_locators

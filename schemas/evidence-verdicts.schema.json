@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence Verdicts",
+  "type": "object",
+  "required": ["schema_version", "evidence_marker", "generated_at_utc", "sampling_algorithm_version", "tests"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "evidence_marker": { "type": "string" },
+    "generated_at_utc": { "type": "string", "format": "date-time" },
+    "sampling_algorithm_version": { "type": "string" },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "test_id", "control_id", "population", "procedure",
+          "required_sample_ids", "excluded_records", "sample_facts",
+          "rule_id", "verdict", "failed_sample_ids", "affected_unit_ids",
+          "evidence_locators"
+        ],
+        "properties": {
+          "test_id": { "type": "string" },
+          "control_id": { "type": "string" },
+          "population": { "type": ["string", "null"] },
+          "procedure": { "type": "string" },
+          "required_sample_ids": { "type": "array", "items": { "type": "string" } },
+          "excluded_records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["record_id", "reason_code"],
+              "properties": {
+                "record_id": { "type": "string" },
+                "reason_code": { "type": "string" }
+              }
+            }
+          },
+          "sample_facts": {
+            "type": "object",
+            "required": [
+              "required_control_design_missing",
+              "failed_required_samples",
+              "affected_units",
+              "prior_major_open_or_repeated",
+              "required_evidence_stale_missing_or_hash_failed",
+              "population_or_required_procedure_unavailable"
+            ]
+          },
+          "rule_id": { "type": "string" },
+          "verdict": { "type": "string", "enum": ["not_tested", "conforms", "minor_nc", "major_nc"] },
+          "failed_sample_ids": { "type": "array", "items": { "type": "string" } },
+          "affected_unit_ids": { "type": "array", "items": { "type": "string" } },
+          "evidence_locators": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

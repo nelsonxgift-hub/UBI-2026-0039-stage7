@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "project_id": "GRC-A3",
+  "variant": "D2",
+  "candidate_binding": "UBI-2026-0039",
+  "assigned_pack": {
+    "file_name": "grc-stage-7-shared-b1.tar.gz",
+    "sha256": "7f2e8fc437405b251d7a963f73241b56eec72b0297435c4d4aab43170dc2cd4e",
+    "manifest_signature": "66e4c5fac60bfc421603db3dc8c3dc2c59e3f5f061fb4f468a5b60d6506ee557",
+    "verified_before_use": true
+  },
+  "commit": "ac98b0cb6dfb03414e3dc86ae22b24aefaa7d29c",
+  "supported_environment": {
+    "os": "Ubuntu 24.04 (Linux 6.18.5, x86_64)",
+    "cpu": "x86_64, container-provisioned",
+    "memory_gb": 8,
+    "tool_versions": {
+      "python": "3.12.3",
+      "pytest": "9.1.1",
+      "pyyaml": "6.0.3",
+      "reportlab": "4.4.10",
+      "jsonschema": "4.26.0"
+    }
+  },
+  "commands": {
+    "provision": "pip install pyyaml pytest reportlab jsonschema --break-system-packages",
+    "build": "cd audit-engine && PYTHONPATH=. python3 -m engine.run_audit --marker UBI-A7-ADFAFF62AD2E --populations ../evidence/audit-populations.csv --severity ../evidence/severity-rules.yaml --outdir .. && cd .. && python3 generate_reports.py",
+    "test": "python3 -m pytest tests/ -q --junitxml=tests/test-report.xml",
+    "clean": "rm -rf tests/test-report.xml .pytest_cache"
+  },
+  "results": {
+    "public_tests": {
+      "passed": 36,
+      "failed": 0,
+      "report": "tests/test-report.xml"
+    },
+    "runtime_seconds": 0.29,
+    "peak_memory_mb": 21,
+    "output_hashes": {
+      "sample-manifest.csv": "8a3a44c9a97b39cb2e5787f85e19fd3cafde35a8ecd4d4361c07d216cdb27e21",
+      "evidence-verdicts.json": "a39bf74661447982119c0d1ac2b9e9f6a5d71cf9a0bfceb7e89687872d4feb4d",
+      "audit-test-sheet.csv": "a4ae1fad4174a7610f195243e5fde574ffa12ffc304025e3f4c9689ec84fe66a",
+      "nonconformity-register.csv": "306116a52b65ee90fd759aaad1bb4b4c67d4d9246656934e820cb2857d4c154e",
+      "internal-audit-report.pdf": "356e6aea1cdf88515350aa2cdae6e3349b92da261ed1f8bf6f000d5d8969535f",
+      "management-letter.pdf": "7958a05cdf2082b2f7429c14a883b8f16a1290d1eef1c6acbe83c0f4dbd18fe7",
+      "evidence-index.csv": "ffe092a9e7078506a5808afdab426db1fb9223d9fe5bde353b4d111381626487",
+      "prior-findings-tracker.csv": "0e564240e50bab1c58145cf3e4c8f238f6516db85d635b1a256b27d4b99cdb3f"
+    }
+  },
+  "inputs": [
+    "evidence/audit-populations.csv",
+    "evidence/severity-rules.yaml",
+    "evidence/public-fixtures.json",
+    "evidence/evidence-pack.md"
+  ],
+  "outputs": [
+    "sample-manifest.csv",
+    "evidence-verdicts.json",
+    "audit-test-sheet.csv",
+    "nonconformity-register.csv",
+    "prior-findings-tracker.csv",
+    "internal-audit-report.pdf",
+    "management-letter.pdf",
+    "evidence-index.csv"
+  ],
+  "manual_preconditions": [
+    "The archive hash was verified against the private overlay by hand before extraction; this step is not automated by the engine and must be repeated by any reviewer who re-downloads the pack.",
+    "The integrity-attestation.md signature and date fields must be completed by the candidate before submission; they are intentionally left as placeholders in this repository."
+  ],
+  "known_limitations": [
+    "Sample size (min(3, eligible_count)) and the 180-day staleness threshold are engine policies documented in decision-log.md (D-003, D-004), not values published in the brief; a different published table would require a re-run, not a logic change.",
+    "The engine was not run against the staff hidden or holdout fixture set, which is not distributed to candidates; tests/test_transfer_style_fixture.py is a hand-written stand-in covering similar boundary conditions.",
+    "Narrative-only tests (identity lifecycle, supplier assessments, incident response, ICT continuity, log retention) are not deterministically sampled from a population file, since no such population was published for them; their facts are transcribed from evidence/evidence-pack.md with exact locators instead.",
+    "Evidence citation strings for evidence-pack.md use a bare filename (e.g. 'evidence-pack.md:Identity export bullet 4') rather than a full relative path, while CSV-sourced citations use 'evidence/audit-populations.csv'. This is a minor formatting inconsistency, not a broken reference; the file is uniquely named within the package.",
+    "The submission's test count (twelve, AT-01 through AT-12) was resolved by direct programme disposition (UBI programme support) after an escalation documented in decision-log.md D-002, confirming a genuine discrepancy between the hash-verified archive (twelve) and the assignment dashboard (eighteen, legacy wording)."
+  ]
+}
